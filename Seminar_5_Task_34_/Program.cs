@@ -15,24 +15,47 @@ void PrintArray(int[] arr)
     Console.Write("[" + string.Join(", ", arr) + "]");
 }
 
+// 
+
+// void Method(int[] massiv)   - метод по поиску ВСЕХ четных чисел во всех элементах матрицы
+// // {
+//     int c = 0;
+//     int mod1 = 0;
+//     int mod2 = 0;
+//     int mod3 = 0;
+
+//     for (int index = 0; index < massiv.Length; index++)
+//     {
+//         mod1 = massiv[index] % 10;
+//         mod2 = (massiv[index] / 10) % 10;
+//         mod3 = massiv[index] / 100;
+
+//         if (mod1 % 2 == 0 & mod1 != 0) c = c + 1;
+//         if (mod2 % 2 == 0 & mod2 != 0) c += 1;
+//         if (mod3 % 2 == 0 & mod3 != 0) c += 1;
+//     }
+//     Console.Write(" -> четных чисел "+c);
+// }
+
+
 void Method(int[] massiv)
 {
-    int c = 0;
-    int mod1 = 0;
-    int mod2 = 0;
-    int mod3 = 0;
+    int c = new int();
+    int mod1 = new int();
+    // int mod2 = 0;
+    // int mod3 = 0;
 
     for (int index = 0; index < massiv.Length; index++)
     {
-        mod1 = massiv[index] % 10;
-        mod2 = (massiv[index] / 10) % 10;
-        mod3 = massiv[index] / 100;
+        mod1 = massiv[index];
+        // mod2 = (massiv[index] / 10) % 10;
+        // mod3 = massiv[index] / 100;
 
-        if (mod1 % 2 == 0 & mod1 != 0) c = c + 1;
-        if (mod2 % 2 == 0 & mod2 != 0) c += 1;
-        if (mod3 % 2 == 0 & mod3 != 0) c += 1;
+        if (mod1 % 2 == 0) c += 1;
+        // if (mod2 % 2 == 0 & mod2 != 0) c += 1;
+        // if (mod3 % 2 == 0 & mod3 != 0) c += 1;
     }
-    Console.Write(" -> четных чисел "+c);
+    Console.Write(" -> четных чисел " + c);
 }
 
 
